@@ -31,7 +31,7 @@ p {
   background-color: var(--blue-dark);
   width: 100px;
   height: calc(100vh);
-
+ 
 }
 
 .middlebar {
@@ -326,4 +326,51 @@ button i {
   object-fit: cover;
   border-radius: var(--border-radius-small);
 
+}
+.main-content{
+  display:flex;
+ 
+}
+
+.dashboard {
+  display: flex;
+}
+
+.profile-column {
+  padding: 1rem 0;
+  position: fixed;
+  background-color: var(--blue-dark);
+  width: 100px;
+  height: 100%; /* Change from calc(100vh) to 100% */
+}
+
+.middlebar {
+  flex: 1; /* Use flex to take up remaining space */
+  margin-left: 100px;
+  min-height: 100%; /* Change from calc(100vh) to 100% */
+  background-color: var(--gray-shade1);
+}
+
+.rightbar {
+  width: 300px; /* Fixed width for now, can adjust later */
+  height: 100%;
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+  
+  .profile-column {
+    width: 80px; /* Adjust width for smaller screens */
+  }
+
+  .middlebar {
+    margin-left: 0; /* Remove left margin on smaller screens */
+  }
+
+  .rightbar {
+    width: 100%; /* Take up full width on smaller screens */
+  }
 }
