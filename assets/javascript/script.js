@@ -1,15 +1,30 @@
-var chart = new Highcharts.Chart({
-    chart: {
-        renderTo: 'chart'
-    },
+  document.addEventListener('DOMContentLoaded', function () {
+    
+      const data = {
+        categories: ['January', 'February', 'March', 'April', 'May'],
+        series: [{
+          name: 'Sales',
+          data: [150, 200, 250, 180, 300]
+        }]
+      };
 
-    xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
-            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    },
+      const options = {
+        chart: {
+          type: 'line'
+        },
+        title: {
+          text: 'Monthly Sales'
+        },
+        xAxis: {
+          categories: data.categories
+        },
+        yAxis: {
+          title: {
+            text: 'Sales'
+          }
+        },
+        series: data.series
+      };
 
-    series: [{
-        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
-    }]
-
-});
+      Highcharts.chart('chartContainer', options);
+    });
