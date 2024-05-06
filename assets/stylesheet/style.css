@@ -1,6 +1,6 @@
 :root {
   --blue-light: rgb(55, 80, 133);
-  --blue-dark: rgb(13, 34, 129);
+  --blue-dark: #061563;
   --border-radius1: 2rem;
   --border-radius-small: 10px;
   --gray-shade1: rgb(241, 241, 241);
@@ -58,7 +58,12 @@ p {
   align-items: center;
   justify-content: center;
 }
-
+.main-content{
+  display: flex;
+  width: calc(100%-100px);
+  margin: 0;
+  padding: 0;
+}
 .profile a {
   font-size: large;
   font-weight: 600;
@@ -155,7 +160,7 @@ form i {
 }
 
 .round-cards-blue {
-  background-color: var(--blue-dark);
+  background-color: #061563;
   border-radius: var(--border-radius-small);
   padding: 2px;
   color: white;
@@ -267,7 +272,7 @@ button i {
 .img {
   width: 130px;
   padding-top: 6px;
-  padding-left: 10px;
+  margin-right: 10px;
   height: auto;
   object-fit: cover;
 }
@@ -284,6 +289,7 @@ button i {
 
 .left-div {
   align-items: left;
+  align-content: flex-end;
 
 }
 
@@ -297,7 +303,7 @@ button i {
   padding: 5px 0.4rem;
   border-radius: 50%;
   background-color: skyblue;
-  font-size: 12px;
+  /* font-size: 12px; */
 
 }
 
@@ -321,8 +327,8 @@ button i {
 .img-container img {
 
   border: 4px solid white;
-  height: 270px;
-  width: 300px;
+  height: 240px;
+  width: 280px;
   object-fit: cover;
   border-radius: var(--border-radius-small);
 
@@ -332,40 +338,18 @@ button i {
  
 }
 
-/* .dashboard {
-  display: flex;
-}
-
-.profile-column {
-  padding: 1rem 0;
-  position: fixed;
-  background-color: var(--blue-dark);
-  width: 100px;
-  height: 100%; 
-}
-
-.middlebar {
-  flex: 1;
-  margin-left: 100px;
-  min-height: 100%; 
-  background-color: var(--gray-shade1);
-}
-
-.rightbar {
-  width: 300px; 
-  height: 100%;
-} */
-
 @media (max-width: 992px) {
   .dashboard {
     flex-direction: column; 
   }
 
-  .profile-column {
+  /* .profile-column {
     display: none;
    
+  } */
+  .main-content{
+    flex-direction: column;
   }
-
   .middlebar {
     margin-left: 0; 
     width: 100%; 
@@ -374,4 +358,57 @@ button i {
   .rightbar {
     width: 100%; 
   }
+ 
+}
+@media (max-width: 1200px){
+  .profile-column{
+    display: none;
+  }
+  .middlebar {
+    margin-left: 0; 
+    width: 100%; 
+  }
+}
+  
+@media (max-width:450px) {
+  .searchBar .filter-button{
+    display: none;
+  }
+  .notification-button{
+    padding: 0rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.transaction-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #b7cce6;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.profile-column {
+  
+  transition: transform 0.3s ease;
+}
+
+.main-content {
+  
+  transition: margin-left 0.3s ease, width 0.3s ease; 
+}
+
+.sidebar-open {
+ 
+  transform: translateX(-100%); 
+}
+
+.main-content-expanded {
+  
+  width: calc(100% + 100px); 
+}
+.main-content-shifted {
+  margin-left: -100px;
 }
