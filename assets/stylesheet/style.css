@@ -137,9 +137,9 @@ p {
   border-radius: 50%;
 }
 
-.middle-column {
+/* .middle-column {
   background-color: rgb(220, 220, 220);
-}
+} */
 
 form {
   margin-top: 1rem;
@@ -200,7 +200,7 @@ button i {
 
 .notification-button {
   margin: 1rem 0;
-  padding: 0.75rem;
+  padding: 0.6rem;
   border-radius: 10px;
   background-color: white;
 
@@ -343,6 +343,10 @@ button i {
 @media (max-width: 992px) {
   .dashboard {
     flex-direction: column; 
+   
+  }
+  .profile-column{
+    height: 100%;
   }
 
   /* .profile-column {
@@ -359,18 +363,15 @@ button i {
 
   .rightbar {
     width: 100%; 
+    margin-left: 100px;
+    background-color: var(--gray-shade1);
   }
  
 }
 @media (max-width: 1200px){
-  .profile-column{
-    display: none;
-  }
-  .main-content{
-    background-color: var(--gray-shade1);
-  }
+  
   .middlebar {
-    margin-left: 0; 
+    margin-left: 100px; 
     width: 100%; 
   }
 }
@@ -378,9 +379,17 @@ button i {
   .searchBar input{
     width: 10rem;
   }
+
 }
   
 @media (max-width:450px) {
+  .profile-column.sidebar-open {
+    transform: translateX(-100%);
+  }
+  .main-content.main-content-expanded {
+    width: calc(100% + 100px);
+    margin-left: -100px;
+  }
   .searchBar form{
     margin-top: 24px;
   }
@@ -391,9 +400,11 @@ button i {
     display: none;
   }
   .notification-button{
-    padding: 0rem;
+    padding: .1rem;
+    margin-top: 1.5rem;
     margin-bottom: 2rem;
   }
+ 
 }
 
 .transaction-icon {
@@ -423,7 +434,8 @@ button i {
 
 .main-content-expanded {
   
-  width: calc(100% + 100px); 
+  width: calc(100% + 100px);
+  margin-left: -100px;
 }
 .main-content-shifted {
   margin-left: -100px;

@@ -30,7 +30,7 @@
     });
 
     const sidebar = document.querySelector('.profile-column');
-      const mainContent = document.querySelector('.main-content');
+      const mainContent = document.querySelector('.profile-column');
       const mainContent1 = document.querySelector('.main-content');
       
       document.getElementById('sidebarToggleBtn').addEventListener('click', () => {
@@ -38,5 +38,3 @@
         mainContent.classList.toggle('main-content-shifted');
         mainContent1.classList.toggle('main-content-expanded')
       });
-
-    
