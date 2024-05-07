@@ -349,10 +349,6 @@ button i {
     height: 100%;
   }
 
-  /* .profile-column {
-    display: none;
-   
-  } */
   .main-content{
     flex-direction: column;
   }
@@ -383,13 +379,13 @@ button i {
 }
   
 @media (max-width:450px) {
-  .profile-column.sidebar-open {
+  /* .profile-column.sidebar-open {
     transform: translateX(-100%);
-  }
-  .main-content.main-content-expanded {
+  } */
+  /* .main-content.main-content-expanded {
     width: calc(100% + 100px);
     margin-left: -100px;
-  }
+  } */
   .searchBar form{
     margin-top: 24px;
   }
