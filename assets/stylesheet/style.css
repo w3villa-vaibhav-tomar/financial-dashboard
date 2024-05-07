@@ -22,6 +22,7 @@ p {
 
 .dashboard {
   display: flex;
+  background-color: var(--gray-shade1);
 
 }
 
@@ -46,6 +47,7 @@ p {
 
   width: calc(100%-8100px);
   height: calc(100vh);
+  background-color: #fff;
 
 }
 
@@ -364,13 +366,27 @@ button i {
   .profile-column{
     display: none;
   }
+  .main-content{
+    background-color: var(--gray-shade1);
+  }
   .middlebar {
     margin-left: 0; 
     width: 100%; 
   }
 }
+@media screen and (width:640px){
+  .searchBar input{
+    width: 10rem;
+  }
+}
   
 @media (max-width:450px) {
+  .searchBar form{
+    margin-top: 24px;
+  }
+  .searchBar input{
+    font-size: .7rem;
+  }
   .searchBar .filter-button{
     display: none;
   }
