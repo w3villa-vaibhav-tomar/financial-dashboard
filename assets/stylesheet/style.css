@@ -32,21 +32,20 @@ p {
   background-color: var(--blue-dark);
   width: 100px;
   height: calc(100vh);
-  
+  left: 0;
+  transition: 0.3s;
+
 }
 
 .middlebar {
 
-  width: 8000px;
-  margin-left: 100px;
   min-height: calc(100vh);
   background-color: var(--gray-shade1);
 }
 
 .rightbar {
 
-  width: calc(100%-8100px);
-  height: calc(100vh);
+  min-height: calc(100vh);
   background-color: #fff;
 
 }
@@ -64,8 +63,9 @@ p {
 .main-content {
   display: flex;
   width: calc(100%-100px);
-  margin: 0;
+  margin-left: 100px;
   padding: 0;
+  border: 2px solid black;
 }
 
 .profile a {
@@ -285,11 +285,13 @@ button i {
   margin-bottom: 10px;
 
 }
-.my-cards{
+
+.my-cards {
   display: flex;
 }
+
 .right-div {
-  
+
   align-content: flex-start;
 }
 
@@ -340,11 +342,6 @@ button i {
 
 }
 
-.main-content {
-  display: flex;
-
-}
-
 .transaction-icon {
   width: 30px;
   height: 30px;
@@ -355,30 +352,21 @@ button i {
   font-weight: 500;
 }
 
-.profile-column {
-
-  transition: transform 0.3s ease;
-}
-
 .main-content {
 
-  transition: margin-left 0.3s ease, width 0.3s ease;
+  transition: margin-left .3s ease, width .3s ease;
 }
 
 .sidebar-open {
 
-  transform: translateX(-100%);
- 
+  left: -100px;
+  transition: 0.3s;
+
 }
 
 .main-content-expanded {
-
-  width: calc(100% + 100px);
-  margin-left: -100px;
-}
-
-.main-content-shifted {
-  margin-left: -100px;
+  margin-left: 0;
+  transition: 0.3s;
 }
 
 .animated-button {
@@ -387,12 +375,14 @@ button i {
 
 @keyframes pulse {
   from {
-      transform: scale(1);
+    transform: scale(1);
   }
+
   to {
-      transform: scale(1.1);
+    transform: scale(1.1);
   }
 }
+
 /* @media (max-width: 1200px) {
 
   .middlebar {
@@ -402,30 +392,27 @@ button i {
 } */
 
 @media (max-width: 992px) {
-  .dashboard {
-    flex-direction: column;
-
-  }
-
-  .profile-column {
-    height: calc(100%);
-  }
 
   .main-content {
     flex-direction: column;
+    width: calc(100% - 100px);
   }
 
   .middlebar {
-    margin-left: 100px;
-    width: 100%;
-  }
 
-  .rightbar {
-    width: 100%;
-    margin-left: 100px;
+    margin-left: 0;
     background-color: var(--gray-shade1);
   }
 
+  .rightbar {
+
+    margin-left: 0;
+    background-color: var(--gray-shade1);
+  }
+
+  .main-content-expanded-responsive {
+    width: calc(100%);
+  }
 }
 
 @media screen and (width:640px) {

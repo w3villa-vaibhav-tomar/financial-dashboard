@@ -31,13 +31,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const sidebar = document.querySelector('.profile-column');
 
-  const mainContent = document.querySelector('.profile-column');
-  const mainContent1 = document.querySelector('.main-content');
-  
+   const mainContent1 = document.querySelector('.main-content');
+ 
   document.getElementById('sidebarToggleBtn').addEventListener('click', () => {
     sidebar.classList.toggle('sidebar-open');
-    mainContent.classList.toggle('main-content-shifted');
-    mainContent1.classList.toggle('main-content-expanded')
+      mainContent1.classList.toggle('main-content-expanded',)
+      mainContent1.classList.toggle('main-content-expanded-responsive')
+      
   });
-
- 
